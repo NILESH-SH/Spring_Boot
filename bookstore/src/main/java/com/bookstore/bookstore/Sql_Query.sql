@@ -39,6 +39,17 @@ INSERT INTO category (categName) VALUES
 ('Biography'),
 ('History'),
 ('Self-help');
-
 select * from category;
+
+INSERT INTO author (aname, categId) VALUES
+('J.K. Rowling', 2),
+('Stephen King', 4),
+('Agatha Christie', 5),
+('George Orwell', 3),
+('Jane Austen', 2),
+('Ernest Hemingway', 3),
+('Harper Lee', 3),
+('Leo Tolstoy', 2),
+('Mark Twain', 4),
+('J.R.R. Tolkien', 2);
 
