@@ -24,4 +24,16 @@ public class CategoryRepository {
         jdbcTemplate.update(sql, categ.getCategName());
     }
 
+    public void deleteById(int id) {
+        String sql = "Delete from category where categId = ?";
+        jdbcTemplate.update(sql, id);
+    }
+
+    public Category updateById(Category categ, int id) {
+        String sql = "Update category set categName = ? where categId = ?";
+        jdbcTemplate.update(sql, categ.getCategName(),id);
+        categ.setCategId(id);
+        return categ;
+    }
+
 }

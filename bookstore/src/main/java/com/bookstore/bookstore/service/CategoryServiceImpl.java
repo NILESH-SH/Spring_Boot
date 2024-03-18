@@ -22,5 +22,15 @@ public class CategoryServiceImpl implements CategoryService{
     public void addCategory(Category categ) {
         cr.addCategory(categ);
     }
+
+    @Override
+    public void deleteById(int id) {
+        cr.deleteById(id);
+    }
+
+    @Override
+    public Category updateById(Category categ, int id) {
+        return cr.updateById(categ,id);
+    }
     
 }
