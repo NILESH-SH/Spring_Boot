@@ -28,6 +28,10 @@ desc category;
 desc author;
 desc books;
 
+select * from category;
+select * from author;
+select * from books;
+
 INSERT INTO category (categName) VALUES
 ('Fiction'),
 ('Non-fiction'),
@@ -53,3 +57,9 @@ INSERT INTO author (aname, categId) VALUES
 ('Mark Twain', 4),
 ('J.R.R. Tolkien', 2);
 
+-- Inserting sample data into the BOOKS table with real book names and bookIds
+INSERT INTO BOOKS (bookId, name, price, authorId, categId) VALUES
+(1, 'To Kill a Mockingbird', 12.99, 21, 1),
+(2, '1984', 9.99, 22, 1),
+(3, 'The Great Gatsby', 14.50, 23, 2),
+(4, 'Pride and Prejudice', 11.25, 24, 2);

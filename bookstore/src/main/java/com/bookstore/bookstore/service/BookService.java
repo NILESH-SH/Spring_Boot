@@ -7,5 +7,11 @@ import com.bookstore.bookstore.entity.Books;
 public interface BookService {
 
     List<Books> getAllBooks();
+
+    void addBook(Books books);
+
+    void deleteById(int id);
+
+    Books updateById(Books books, int id);
     
 }

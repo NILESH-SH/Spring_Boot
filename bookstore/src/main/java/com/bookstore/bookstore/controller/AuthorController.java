@@ -18,28 +18,30 @@ import com.bookstore.bookstore.service.AuthorService;
 @RestController
 @RequestMapping("/author")
 public class AuthorController {
-    
-    @Autowired AuthorService as;
+
+    @Autowired
+    AuthorService as;
 
     @GetMapping
-    public List<Author> getAllAuthor(){
+    public List<Author> getAllAuthor() {
         return as.getAllAuthor();
     }
- @PostMapping()
-    public String addAuthor(@RequestBody Author author){
+
+    @PostMapping()
+    public String addAuthor(@RequestBody Author author) {
         as.addAuthor(author);
         return "Author Added ";
     }
 
     @DeleteMapping("/{id}")
-    public String deleteById(@PathVariable int id){
+    public String deleteById(@PathVariable int id) {
         as.deleteById(id);
-        return "Deleted id : "+id;
+        return "Deleted id : " + id;
     }
 
     @PutMapping("/{id}")
-    public Author updateById(@RequestBody Author author, @PathVariable int id){
-        return as.updateById(author,id);
+    public Author updateById(@RequestBody Author author, @PathVariable int id) {
+        return as.updateById(author, id);
     }
-    
+
 }
