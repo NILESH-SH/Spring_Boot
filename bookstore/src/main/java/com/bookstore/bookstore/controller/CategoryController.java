@@ -27,7 +27,7 @@ public class CategoryController {
     }
 
     @PostMapping()
-    public String getAllCategory(@RequestBody Category categ){
+    public String addCategory(@RequestBody Category categ){
         cs.addCategory(categ);
         return "Category Added ";
     }
