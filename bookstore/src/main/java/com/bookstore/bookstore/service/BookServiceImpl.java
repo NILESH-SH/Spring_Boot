@@ -42,10 +42,10 @@ public class BookServiceImpl implements BookService {
         if (field.equals("name")) {
             Collections.sort(b, Comparator.comparing(Books::getName));
         } else if (field.equals("price")) {
-            Collections.sort(b, Comparator.comparingInt(Books::getCategId));
+            Collections.sort(b, Comparator.comparingDouble(Books::getPrice));
             System.out.println(b);
         } else if (field.equals("author")) {
-            Collections.sort(b, Comparator.comparingInt(Books::getCategId));
+            Collections.sort(b, Comparator.comparingInt(Books::getAuthorId));
         } else if (field.equals("category")) {
             Collections.sort(b, Comparator.comparingInt(Books::getCategId));
         } else {
