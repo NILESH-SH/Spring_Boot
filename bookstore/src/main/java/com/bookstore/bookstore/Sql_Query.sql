@@ -43,7 +43,7 @@ INSERT INTO category (categName) VALUES
 ('Biography'),
 ('History'),
 ('Self-help');
-select * from category;
+
 
 INSERT INTO author (aname, categId) VALUES
 ('J.K. Rowling', 2),

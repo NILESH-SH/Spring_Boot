@@ -22,6 +22,11 @@ public class BookController {
     @Autowired
     BookService bs;
 
+    // public BookController(BookService s){
+    //     this.bs =  s;
+    // }
+
+    
     @GetMapping()
     public List<Books> getAllBooks() {
         return bs.getAllBooks();
@@ -43,4 +48,14 @@ public class BookController {
     public Books updateById(@RequestBody Books books, @PathVariable int id) {
         return bs.updateById(books, id);
     }
+
+    @GetMapping("sorted/{field}")
+    public List<Books> getSortedAccToField(@PathVariable String field){
+        return bs.sortBooksAccToField(field);
+    }
+
+    // @GetMapping("sorted/{name}")
+    // public List<Books> getBookByName(@PathVariable String name){
+    //     return bs.getBookByName(name);
+    // }
 }

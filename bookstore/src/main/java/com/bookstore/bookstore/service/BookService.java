@@ -13,5 +13,9 @@ public interface BookService {
     void deleteById(int id);
 
     Books updateById(Books books, int id);
-    
+
+    List<Books> sortBooksAccToField(String field);
+
+    List<Books> getBookByName(String string);
+
 }

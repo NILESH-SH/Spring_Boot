@@ -36,4 +36,9 @@ public class BookRepository {
         return books;
     }
 
+    public List<Books> getBookByName(String string) {
+        String sql = "Select * from Books where name = ?";
+        return jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(Books.class),string);
+    }
+
 }
